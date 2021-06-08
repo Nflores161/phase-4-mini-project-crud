@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  #gets all spices
+  get '/spices', to: 'spices#index'
+
+  #creates a new post to spices
+  post '/spices', to: 'spices#create'
+
+  #updates an existing spice
+  patch '/spices/:id', to: 'spices#update'
+
+  #deletes a spice
+  delete '/spices/:id', to: 'spices#destroy'
+
 end
